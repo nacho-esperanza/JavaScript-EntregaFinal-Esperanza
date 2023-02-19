@@ -48,11 +48,16 @@ productos.forEach((product) => {
     content.append(comprar);
 
     comprar.addEventListener("click", () =>{
+
+        const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+        
+
         carrito.push({
             id: product.id,
             img: product.img,
             nombre: product.nombre,
             precio: product.precio,
+            cantidad: product.cantidad,
         });
         console.log(carrito);
         saveLocal();
@@ -61,39 +66,7 @@ productos.forEach((product) => {
 
 });
 
-verCarrito.addEventListener("click", () => {
-    const modal = document.createElement("div");
-    modal.className = "modal-header"
-    modal.innerHTML = `
-        <h1 class="modal-header-title">Carrito.</h1>
-        `;
-    modalContainer.append(modal);
 
-    const modalbutton = document.createElement("h1");
-
-
-    carrito.forEach((product) => {
-    let carritoContent = document.createElement("div");
-    carritoContent.className = "modal-content";
-    carritoContent.innerHTML =  `
-        <h3>${product.nombre}</h3>
-        <p>${product.precio} $</p>
-        `;
-
-    modalContainer.append(carritoContent);
-    });
-
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
-
-    const compratotal = document.createElement("div");
-    compratotal.className = "total-content";
-    compratotal.innerHTML = `Total a pagar: ${total} $`;
-    modalContainer.append(compratotal);
-
-    
-
-    
-});
 
 
 const saveLocal = () => {
