@@ -40,7 +40,7 @@ const pintarCarrito = () => {
     
     });
 
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+    const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const compratotal = document.createElement("div");
     compratotal.className = "total-content";
@@ -58,5 +58,23 @@ const eliminarProducto = () => {
         return carritoId  !== foundId;
     });
 
+    
+    saveLocal();
     pintarCarrito();
 }
+
+/*
+const carritoCounter = () => {
+    
+    cantidadCarrito.style.display = "block";
+    
+    const carritoLenght = carrito.lenght;
+
+    localStorage.setItem("carritoLenght", JSON.stringify(carritoLenght));
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLenght"));
+
+};
+
+carritoCounter();
+*/

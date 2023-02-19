@@ -24,6 +24,7 @@ stockProductos.push(new Producto(4, "Medias", "2500", "30"));
 const articulos = document.getElementById("articulos");
 const verCarrito = document.getElementById("carrito");
 const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
 
@@ -50,16 +51,25 @@ productos.forEach((product) => {
     comprar.addEventListener("click", () =>{
 
         const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
-        
+        console.log(repeat);
 
-        carrito.push({
-            id: product.id,
-            img: product.img,
-            nombre: product.nombre,
-            precio: product.precio,
-            cantidad: product.cantidad,
-        });
-        console.log(carrito);
+        if((repeat)){
+            carrito.map((prod) => {
+                if(prod.id === product.id){
+                    prod.cantidad++;
+                }
+            });
+        }else{
+            carrito.push({
+                id: product.id,
+                img: product.img,
+                nombre: product.nombre,
+                precio: product.precio,
+                cantidad: product.cantidad,
+            });
+            console.log(carrito);
+        }
+
         saveLocal();
     });
 
