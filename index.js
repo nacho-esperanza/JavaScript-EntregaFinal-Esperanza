@@ -30,7 +30,12 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-productos.forEach((product) => {
+const getProducts = async () => {
+    const response = await fetch("data.json");
+    const data = await response.json();
+    
+    
+data.forEach((product) => {
     let content = document.createElement("div");
     content.className = "espacio-prod";
     content.innerHTML = `
@@ -75,6 +80,10 @@ productos.forEach((product) => {
 
 
 });
+};
+
+getProducts();
+
 
 
 

@@ -62,19 +62,3 @@ const eliminarProducto = () => {
     saveLocal();
     pintarCarrito();
 }
-
-/*
-const carritoCounter = () => {
-    
-    cantidadCarrito.style.display = "block";
-    
-    const carritoLenght = carrito.lenght;
-
-    localStorage.setItem("carritoLenght", JSON.stringify(carritoLenght));
-
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLenght"));
-
-};
-
-carritoCounter();
-*/

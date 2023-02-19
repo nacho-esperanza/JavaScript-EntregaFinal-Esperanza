@@ -1,3 +1,5 @@
+/* ARRAY ANTES DE CREAR EL JSON CON LOS PRODUCTOS
+
 
 const productos = [
     {
@@ -33,3 +35,5 @@ const productos = [
         img: "https://freres.ar/wp-content/uploads/2021/10/k-uai-1536x2048.jpg",
     }
 ]
+
+*/
