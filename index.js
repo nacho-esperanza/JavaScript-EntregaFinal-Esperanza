@@ -42,7 +42,7 @@ data.forEach((product) => {
     content.innerHTML = `
     <img src="${product.img}">
     <h3>${product.nombre}</h3>
-    <p class="precio">${product.precio} $</p>
+    <p class="precio">$${product.precio} </p>
     <p>Quedan ${product.dispo} disponibles. </p>
     `
 
