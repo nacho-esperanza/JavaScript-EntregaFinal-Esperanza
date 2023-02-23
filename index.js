@@ -21,6 +21,7 @@ stockProductos.push(new Producto(4, "Medias", "2500", "30"));
 
 
 
+
 const articulos = document.getElementById("articulos");
 const verCarrito = document.getElementById("carrito");
 const modalContainer = document.getElementById("modal-container");
@@ -77,6 +78,10 @@ data.forEach((product) => {
 
         saveLocal();
     });
+
+    comprar.addEventListener("click", function(){
+        Swal.fire("Has añadido este producto al Carrito!");
+    })
 
 
 });

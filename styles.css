@@ -58,13 +58,13 @@ h1{
     cursor: pointer;
 }
 
+
 .modal-container{
     width: 80%;
     margin: 0 10%;
     max-height: 88vh;
     color: white;
     background-color: black;
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -73,12 +73,14 @@ h1{
     z-index: 9;
     top: 12vh;
     scrollbar-color: none;
-
 }
+
+
 
 .modal-container::-webkit-scrollbar{
     display: none;
 }
+
 
 .modal-header{
     display: flex;
@@ -90,9 +92,16 @@ h1{
 
 .modal-header-title{
     justify-self: start;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .modal-header-button{
+    color: white;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -107,10 +116,6 @@ h1{
 
 }
 
-.modal-container > div > img {
-    height: 120px;
-    width: 120px;
-}
 
 .total-content {
     font-size: 25px;
@@ -152,10 +157,6 @@ h4 {
     color: #222;
 }
 
-h6 {
-    font-weight: 700;
-    font-size: 12px;
-}
 
 p {
     font-size: 16px;
@@ -163,13 +164,10 @@ p {
     margin: 15px 0 20px 0;
 }
 
-.section-p1 {
+.presentacion {
     padding: 40px 80px;
 }
 
-.section-m1 {
-    margin: 40px 0;
-}
 
 body {
     width: 100%;
@@ -190,7 +188,7 @@ body {
     justify-content: center;
 }
 
-#product1 {
+#titulo {
     text-align: center;
 }
 
@@ -217,3 +215,7 @@ body {
         width: 100%;
     }
 }
+
+
+
+

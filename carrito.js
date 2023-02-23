@@ -4,7 +4,7 @@ const pintarCarrito = () => {
     const modalHeader = document.createElement("div");
     modalHeader.className = "modal-header"
     modalHeader.innerHTML = `
-        <h1 class="modal-header-title">Carrito.</h1>
+        <h1 class="modal-header-title">Carrito 🛒</h1>
         `;
     modalContainer.append(modalHeader);
 
@@ -23,12 +23,14 @@ const pintarCarrito = () => {
     carrito.forEach((product) => {
     let carritoContent = document.createElement("div");
     carritoContent.className = "modal-content";
+
+    
     carritoContent.innerHTML =  `
         <h3>${product.nombre}</h3>
         <p>${product.precio} $</p>
         <p>Cantidad: ${product.cantidad}</p>
         `;
-
+        
     modalContainer.append(carritoContent);
 
     let eliminar = document.createElement("span");
